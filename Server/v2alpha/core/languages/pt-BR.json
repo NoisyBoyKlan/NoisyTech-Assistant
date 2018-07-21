@@ -1,0 +1,138 @@
+{
+	"questionSplit": [
+		" , ",
+		" , e",
+		 ", e",
+		" ,e" ,
+		",e"  ,
+		 ", ",
+		" ," ,
+		","  ,
+		" ? ",
+		 "? ",
+		" ?" ,
+		 "?" ,
+		" ! ",
+		 "! ",
+		" !" ,
+		 "!" ,
+		" . ",
+		 ". ",
+		" ." ,
+		 "." ,
+		" e "
+	],
+	"replaceSomeWords": {
+		"que": [
+			"q",
+			"qe"
+		],
+		"é": [
+			"eh"
+		],
+		"quanto": [
+			"qtos",
+			"qtas",
+			"qts",
+			"qto",
+			"qta",
+			"qt"
+		],
+		"está": [
+			"tá",
+			"ta",
+			"táh",
+			"tah"
+		],
+		"oi": [
+			"olá",
+			"ola"
+		],
+		"kkkk": [
+			"rsrs"
+		]
+	},
+	"functions": {
+		"retouchWords": {
+			"arguments": "string",
+			"body": "if(string.length>1){for(var i=string.length-1;i>0;i--)isAlpha(string[i])&&(string[i]==string[i-1]?'r'==string[i]||'s'==string[i]?i>1&&string[i]==string[i-2]&&(string=string.slice(0,i-1)+string.slice(i)):string=string.slice(0,i-1)+string.slice(i):'a'==string[i]&&'á'==string[i-1]||'à'==string[i-1]||'e'==string[i]&&'é'==string[i-1]||'i'==string[i]&&'í'==string[i-1]||'o'==string[i]&&'ó'==string[i-1]||'u'==string[i]&&'ú'==string[i-1]?string=string.slice(0,i)+string.slice(i+1):'á'==string[i]||'à'==string[i]&&'a'==string[i-1]||'é'==string[i]&&'e'==string[i-1]||'í'==string[i]&&'i'==string[i-1]||'ó'==string[i]&&'o'==string[i-1]||'ú'==string[i]&&'u'==string[i-1]?string=string.slice(0,i-1)+string.slice(i):'r'==string[i-1]&&'s'==string[i]&&'r'==string[i-3]&&'s'==string[i-2]&&(string=string.slice(0,i-2)+string.slice(i)));isAlpha(string[0])&&string[0]==string[1]&&('r'!=string[0]&&'s'!=string[0]||(string=string.slice(0,0)+string.slice(1))),isAlpha(string[string.length-2])&&string[string.length-2]==string[string.length-1]&&('r'!=string[string.length-2]&&'s'!=string[string.length-2]||(string=string.slice(0,string.length-2)+string.slice(string.length-1)))}'k'==string[0]&&1==string.length&&(string='kkkk'),'r'==string[0]&&'s'==string[1]&&2==string.length&&(string='rsrs');return string;"
+		}
+	},
+	"detectCases": {
+		"default_login": [
+			"login"
+		],
+		"what": [
+			"o que",
+			"que",
+			"qual", 
+			"quanto"
+		],
+		"when": [
+			"quando"
+		],
+		"definition": [
+			"é",
+			"são"
+		],
+		"laugh": [
+			"kkkk"
+		],
+		"greet": [
+			"oi"
+		],
+		"greetQ1": [
+			"tudo bem",
+			"tudo bom"
+		],
+		"greetQ2": [
+			"como vai",
+			"como vão as coisas",
+			"como vao as coisas",
+			"como vão as coisa",
+			"como vao as coisa",
+			"como vai a vida",
+			"como está indo"
+		],
+		"iris_property": [
+			"o seu",
+			"a sua",
+			"seu",
+			"sua"
+		],
+		"user_property": [
+			"o meu",
+			"a minha",
+			"meu",
+			"minha"
+		],
+		"name": [
+			"nome"
+		]
+	},
+	"responses": {
+		"what": {
+			"definition": {
+				"iris_property": {
+					"name": [
+						"O meu nome é {iris.name}",
+						"Meu nome é {iris.name}",
+						"Sou {iris.name}"
+					]
+				}
+			}
+		},
+		"greet": [
+			"Oi",
+			"Olá"
+		],
+		"greetQ1": [
+			"Sim"
+		],
+		"greetQ2": [
+			"Bem",
+			"Tudo bem",
+			"Muito bem"
+		]
+	}
+}

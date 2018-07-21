@@ -1,0 +1,20 @@
+{
+	"main": "iris.html",
+	"name": "Iris A.I.",
+	"description": "Iris A.I.",
+	"version": "0.0.1",
+	"keywords": [ "demo", "node-webkit" ],
+	"window": {
+		"title": "Iris A.I. - Iris Artificial Intelligence",
+		"icon": "logo.png",
+		"fullscreen": false,
+		"kiosk": false,
+		"resizable": false,
+		"toolbar": false,
+		"width": 405,
+		"height": 720
+	},
+	"webkit": {
+		"plugin": true
+	}
+}

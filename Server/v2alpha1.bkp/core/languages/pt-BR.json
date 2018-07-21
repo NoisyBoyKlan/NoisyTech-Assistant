@@ -1,0 +1,58 @@
+{
+	"questionSplit": {
+		"0": " , ",
+		"1":  ", ",
+		"2": " ," ,
+		"3": ","  ,
+		"4": " ? ",
+		"5":  "? ",
+		"6": " ?" ,
+		"7":  "?" ,
+		"8": " ! ",
+		"9":  "! ",
+		"10": " !" ,
+		"11":  "!" ,
+		"12": " . ",
+		"13":  ". ",
+		"14": " ." ,
+		"15":  "." ,
+		"16": " e "
+	},
+	"replaceSomeWords": {
+		"que": {
+			"0": "q",
+			"1": "qe"
+		},
+		"é": {
+			"0": "eh"
+		},
+		"quanto": {
+			"0": "qtos",
+			"1": "qtas",
+			"2": "qts",
+			"3": "qto",
+			"4": "qta",
+			"5": "qt"
+		}
+	},
+	"functions": {
+		"retouchWords": {
+			"arguments": "e",
+			"body": "if(e.length>1){for(var l=e.length-1;l>0;l--);isAlpha(e[l])&&(e[l]==e[l-1]?'r'==e[l]||'s'==e[l]?l>1&&e[l]==e[l-2]&&(e=e.slice(0,l-1)+e.slice(l)):e=e.slice(0,l-1)+e.slice(l):'a'==e[l]&&'á'==e[l-1]||'à'==e[l-1]||'e'==e[l]&&'é'==e[l-1]||'i'==e[l]&&'í'==e[l-1]||'o'==e[l]&&'ó'==e[l-1]||'u'==e[l]&&'ú'==e[l-1]?e=e.slice(0,l)+e.slice(l+1):('á'==e[l]||'à'==e[l]&&'a'==e[l-1]||'é'==e[l]&&'e'==e[l-1]||'í'==e[l]&&'i'==e[l-1]||'ó'==e[l]&&'o'==e[l-1]||'ú'==e[l]&&'u'==e[l-1])&&(e=e.slice(0,l-1)+e.slice(l)));isAlpha(e[0])&&e[0]==e[1]&&('r'!=e[0]&&'s'!=e[0]||(e=e.slice(0,0)+e.slice(1))),isAlpha(e[e.length-2])&&e[e.length-2]==e[e.length-1]&&('r'!=e[e.length-2]&&'s'!=e[e.length-2]||(e=e.slice(0,e.length-2)+e.slice(e.length-1)))}return'k'==e[0]&&1==e.length&&(e='kkkk'),e"
+		}
+	},
+	"detectCases": {
+		"what": {
+			"0": "o que",
+			"1": "qual", 
+			"2": "quanto"
+		},
+		"definition": {
+			"0": "é",
+			"1": "são"
+		},
+		"question": {
+			"0": "?"
+		}
+	}
+}
